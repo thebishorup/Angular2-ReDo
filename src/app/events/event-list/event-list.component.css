@@ -1,0 +1,12 @@
+.eventCustomThumbnail {
+    background-color: #475563;
+    color: #C6BFBE;
+    border-radius: 0;
+    border:none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.eventCustomThumbnail:hover {
+    background-color: #4F5F6C;
+}
