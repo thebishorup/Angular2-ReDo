@@ -26,3 +26,7 @@ button:hover {
 .well div {
     color: #bbb;
 }
+
+.thumbnail {
+    min-height: 250px;
+}
