@@ -22,3 +22,7 @@ button:hover {
     background-color: #A84C19;
     color: white;
 }
+
+.well div {
+    color: #bbb;
+}
