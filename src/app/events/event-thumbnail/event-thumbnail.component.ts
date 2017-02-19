@@ -7,11 +7,17 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 })
 export class EventThumbnailComponent implements OnInit {
 
-  @Input() event:any
+  @Input() event: any
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getStartTimeClass() {
+    if  (this.event && this.event.time === '8:00 am')
+      return ['green', 'bold']
+    return []
   }
 
 }

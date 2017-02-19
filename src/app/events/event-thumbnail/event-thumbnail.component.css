@@ -30,3 +30,11 @@ button:hover {
 .thumbnail {
     min-height: 250px;
 }
+
+.green {
+    color: #003300 !important;
+}
+
+.bold {
+    font-weight: bold;
+}
