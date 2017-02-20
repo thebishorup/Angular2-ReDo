@@ -9,6 +9,10 @@ export class EventService {
     return EVENTS
   }
 
+  getEventById(id: number){
+    return EVENTS.find(e => e.id === id)
+  }
+
 }
 
 const EVENTS = [
@@ -178,19 +182,19 @@ const EVENTS = [
         {
           id: 2,
           name: "Angular and React together",
-          presenter: "Jamison Dance",
+          presenter: 'Jamison Dance',
           duration: 2,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `React v449.6 has just been released. Let's see how to use 
           this new version with Angular to create even more impressive applications.`,
           voters: ['bradgreen', 'martinfowler']
         },
         {
           id: 3,
-          name: "Redux Woes",
-          presenter: "Rob Wormald",
+          name: 'Redux Woes',
+          presenter: 'Rob Wormald',
           duration: 1,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `Everyone is using Redux for everything from Angular to React to 
           Excel macros, but you're still having trouble grasping it? We'll take a look
           at how farmers use Redux when harvesting grain as a great introduction to 
@@ -199,20 +203,20 @@ const EVENTS = [
         },
         {
           id: 4,
-          name: "ng-wat again!!",
-          presenter: "Shai Reznik",
+          name: 'ng-wat again!!',
+          presenter: 'Shai Reznik',
           duration: 1,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `Let's take a look at some of the stranger pieces of Angular 4,
           including neural net nets, Android in Androids, and using pipes with actual pipes.`,
           voters: ['bradgreen', 'martinfowler', 'igorminar', 'johnpapa']
         },
         {
           id: 5,
-          name: "Dressed for Success",
-          presenter: "Ward Bell",
+          name: 'Dressed for Success',
+          presenter: 'Ward Bell',
           duration: 2,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `Being a developer in 2037 is about more than just writing bug-free code. 
           You also have to look the part. In this amazing expose, Ward will talk you through
           how to pick out the right clothes to make your coworkers and boss not only
@@ -221,10 +225,10 @@ const EVENTS = [
         },
         {
           id: 6,
-          name: "These aren't the directives you're looking for",
-          presenter: "John Papa",
+          name: 'These aren\'t the directives you\'re looking for',
+          presenter: 'John Papa',
           duration: 2,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `Coinciding with the release of Star Wars Episode 18, this talk will show how
           to use directives in your Angular 4 development while drawing lessons from the new movie,
           featuring all your favorite characters like Han Solo's ghost and Darth Jar Jar.`,
@@ -247,10 +251,10 @@ const EVENTS = [
       sessions: [
         {
           id: 1,
-          name: "Diversity in Tech",
-          presenter: "Sir Dave Smith",
+          name: 'Diversity in Tech',
+          presenter: 'Sir Dave Smith',
           duration: 2,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `Yes, we all work with cyborgs and androids and Martians, but 
           we probably don't realize that sometimes our internal biases can make it difficult for
           these well-designed coworkers to really feel at home coding alongside us. This talk will
@@ -259,10 +263,10 @@ const EVENTS = [
         },
         {
           id: 2,
-          name: "World Peace and Angular",
-          presenter: "US Secretary of State Zach Galifianakis",
+          name: 'World Peace and Angular',
+          presenter: 'US Secretary of State Zach Galifianakis',
           duration: 2,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `Angular has been used in most of the major peace brokering that has
           happened in the last decade, but there is still much we can do to remove all
           war from the world, and Angular will be a key part of that effort.`,
@@ -270,10 +274,10 @@ const EVENTS = [
         },
         {
           id: 3,
-          name: "Using Angular with Androids",
-          presenter: "Dan Wahlin",
+          name: 'Using Angular with Androids',
+          presenter: 'Dan Wahlin',
           duration: 3,
-          level: "Advanced",
+          level: 'Advanced',
           abstract: `Androids may do everything for us now, allowing us to spend all day playing 
           the latest Destiny DLC, but we can still improve the massages they give and the handmade
           brie they make using Angular 4. This session will show you how.`,
@@ -296,10 +300,10 @@ const EVENTS = [
       sessions: [
         {
           id: 1,
-          name: "Gambling with Angular",
-          presenter: "John Papa",
+          name: 'Gambling with Angular',
+          presenter: 'John Papa',
           duration: 1,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `No, this talk isn't about slot machines. We all know that 
           Angular is used in most waiter-bots and coke vending machines, but
           did you know that was also used to write the core engine in the majority
@@ -309,10 +313,10 @@ const EVENTS = [
         },
         {
           id: 2,
-          name: "Angular 4 in 60ish Minutes",
-          presenter: "Dan Wahlin",
+          name: 'Angular 4 in 60ish Minutes',
+          presenter: 'Dan Wahlin',
           duration: 2,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `Get the skinny on Angular 4 for anyone new to this great new technology.
           Dan Wahlin will show you how you can get started with Angular in 60ish minutes, 
           guaranteed!`,
@@ -320,4 +324,4 @@ const EVENTS = [
         }
       ]
     }
-  ]
+  ];
