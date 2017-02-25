@@ -11,6 +11,7 @@ import { NavbarComponent } from './nav/navbar/navbar.component';
 import { EventService } from './events/services/event.service';
 import { ToastrService } from './events/common/toastr.service';
 import { EventRouteActivatorService } from './events/services/event-route-activator/event-route-activator.service';
+import { EventListResolverService } from './events/services/event-list-resolver/event-list-resolver.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 
 import { appRoutes } from './routes';
@@ -40,7 +41,8 @@ import { Error404Component } from './events/error/error404/error404.component';
     {
       provide: 'canDeactivateCreateEvent',
       useValue: checkDirtyState
-    }
+    },
+    EventListResolverService
   ],
   bootstrap: [AppComponent]
 })
