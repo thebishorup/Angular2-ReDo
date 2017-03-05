@@ -1,30 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Rx';
+import { Subject, Observable } from 'rxjs/Rx';
+
+import { IEvent } from '../model/index';
 
 @Injectable()
 export class EventService {
 
   constructor() { }
 
-  getEvents() {
-    let subject = new Subject()
+  getEvents() : Observable<IEvent[]> {
+    let subject = new Subject<IEvent[]>()
     setTimeout(() => {
       subject.next(EVENTS); subject.complete();
     }, 100)
-    return EVENTS
+    return subject
   }
 
-  getEventById(id: number){
+  getEventById(id: number): IEvent {
     return EVENTS.find(e => e.id === id)
   }
 
 }
 
-const EVENTS = [
+const EVENTS: IEvent[] = [
     {
       id: 1,
       name: 'Angular Connect',
-      date: '9/26/2036',
+      date: new Date('9/26/2036'),
       time: '10:00 am',
       price: 599.99,
       imageUrl: '/app/assets/images/angularconnect-shield.png',
@@ -102,7 +104,7 @@ const EVENTS = [
     {
       id: 2,
       name: 'ng-nl',
-      date: '4/15/2037',
+      date: new Date('4/15/2037'),
       time: '9:00 am',
       price: 950.00,
       imageUrl: '/app/assets/images/ng-nl.png',
@@ -117,7 +119,7 @@ const EVENTS = [
           name: "Testing Angular 4 Workshop",
           presenter: "Pascal Precht & Christoph Bergdorf",
           duration: 4,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `In this 6 hour workshop you will learn not only how to test Angular 4, 
           you will also learn how to make the most of your team's efforts. Other topics
           will be convincing your manager that testing is a good idea, and using the new
@@ -126,20 +128,20 @@ const EVENTS = [
         },
         {
           id: 2,
-          name: "Angular 4 and Firebase",
-          presenter: "David East",
+          name: 'Angular 4 and Firebase',
+          presenter: 'David East',
           duration: 3,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `In this workshop, David East will show you how to use Angular with the new
           ultra-real-time 5D Firebase back end, hosting platform, and wine recommendation engine.`,
           voters: ['bradgreen', 'igorminar', 'johnpapa']
         },
         {
           id: 3,
-          name: "Reading the Angular 4 Source",
-          presenter: "Patrick Stapleton",
+          name: 'Reading the Angular 4 Source',
+          presenter: 'Patrick Stapleton',
           duration: 2,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `Angular 4's source code may be over 25 million lines of code, but it's really 
           a lot easier to read and understand then you may think. Patrick Stapleton will talk
           about his secretes for keeping up with the changes, and navigating around the code.`,
@@ -147,10 +149,10 @@ const EVENTS = [
         },
         {
           id: 4,
-          name: "Hail to the Lukas",
-          presenter: "Lukas Ruebbelke",
+          name: 'Hail to the Lukas',
+          presenter: 'Lukas Ruebbelke',
           duration: 1,
-          level: "Beginner",
+          level: 'Beginner',
           abstract: `In this session, Lukas will present the 
           secret to being awesome, and how he became the President 
           of the United States through his amazing programming skills, 
@@ -162,7 +164,7 @@ const EVENTS = [
     {
       id: 3,
       name: 'ng-conf 2037',
-      date: '5/4/2037',
+      date: new Date('5/4/2037'),
       time: '9:00 am',
       price: 759.00,
       imageUrl: '/app/assets/images/ng-conf.png',
@@ -174,10 +176,10 @@ const EVENTS = [
       sessions: [
         {
           id: 1,
-          name: "How Elm Powers Angular 4",
-          presenter: "Murphy Randle",
+          name: 'How Elm Powers Angular 4',
+          presenter: 'Murphy Randle',
           duration: 2,
-          level: "Intermediate",
+          level: 'Intermediate',
           abstract: `We all know that Angular is written in Elm, but did you
           know how the source code is really written? In this exciting look
           into the internals of Angular 4, we'll see exactly how Elm powers
@@ -186,7 +188,7 @@ const EVENTS = [
         },
         {
           id: 2,
-          name: "Angular and React together",
+          name: 'Angular and React together',
           presenter: 'Jamison Dance',
           duration: 2,
           level: 'Intermediate',
@@ -244,7 +246,7 @@ const EVENTS = [
     {
       id: 4,
       name: 'UN Angular Summit',
-      date: '6/10/2037',
+      date: new Date('6/10/2037'),
       time: '8:00 am',
       price: 800.00,
       imageUrl: '/app/assets/images/basic-shield.png',
@@ -293,7 +295,7 @@ const EVENTS = [
     {
       id: 5,
       name: 'ng-vegas',
-      date: '2/10/2037',
+      date: new Date('2/10/2037'),
       time: '9:00 am',
       price: 400.00,
       imageUrl: '/app/assets/images/ng-vegas.png',
