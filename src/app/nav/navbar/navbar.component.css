@@ -32,3 +32,8 @@
 .navbar-form button:hover {
     background-color: #f39a14;
 }
+
+.navbar-nav li > .active {
+    color: #f97924;
+    font-weight: bold;
+}
